@@ -27,10 +27,7 @@ export function Footer() {
               <span className="text-foreground">Stephany</span>
               <span className="text-accent">.</span>
             </motion.a>
-            <p className="text-sm text-muted-foreground flex items-center gap-1">
-              Desenvolvido com{" "}
-              <Heart size={14} className="text-accent fill-accent" /> em 2024
-            </p>
+
           </div>
 
           {/* Social links */}

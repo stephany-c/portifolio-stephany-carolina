@@ -118,8 +118,19 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+    cursor: default;
+  }
+  
+  a, button, [role="button"], .cursor-pointer, input[type="submit"], input[type="button"] {
+    cursor: pointer;
+  }
+
+  /* Prevent text selection cursor */
+  h1, h2, h3, h4, h5, h6, p, span, div {
+    cursor: default;
   }
 }
 
@@ -228,7 +239,7 @@ html {
 
 /* Grid pattern */
 .grid-pattern {
-  background-image: 
+  background-image:
     linear-gradient(oklch(0.20 0 0 / 0.3) 1px, transparent 1px),
     linear-gradient(90deg, oklch(0.20 0 0 / 0.3) 1px, transparent 1px);
   background-size: 60px 60px;
@@ -244,7 +255,7 @@ html {
 .gradient-border {
   --angle: 0deg;
   border: 2px solid transparent;
-  background: 
+  background:
     linear-gradient(oklch(0.10 0 0), oklch(0.10 0 0)) padding-box,
     linear-gradient(var(--angle), oklch(0.70 0.18 280), oklch(0.40 0.10 280), oklch(0.70 0.18 280)) border-box;
   animation: rotate-gradient 4s linear infinite;
@@ -267,14 +278,28 @@ html {
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 /* Floating animation */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .animate-float {
@@ -283,8 +308,15 @@ html {
 
 /* Pulse glow animation */
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px oklch(0.70 0.18 280 / 0.3); }
-  50% { box-shadow: 0 0 40px oklch(0.70 0.18 280 / 0.5); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px oklch(0.70 0.18 280 / 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 40px oklch(0.70 0.18 280 / 0.5);
+  }
 }
 
 .animate-pulse-glow {

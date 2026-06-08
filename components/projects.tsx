@@ -25,10 +25,10 @@ const projects: Project[] = [
     description: "Sistema completo para controle de finanças pessoais e empresariais.",
     longDescription:
       "Uma aplicação Full Stack robusta desenvolvida para facilitar o gerenciamento financeiro. Conta com controle de entradas/saídas, relatórios detalhados e segurança avançada de dados.",
-    image: "/projects/financas.jpg",
+    image: "/capa-gestao-financas.png",
     technologies: ["Angular", "Java", "Spring Boot", "PostgreSQL"],
     category: "Full Stack",
-    github: "https://github.com/stephany-c",
+    github: "https://github.com/stephany-c/Projeto-Full-Stack-Sistema-de-Gestao-Financeira",
     live: "https://projeto-full-stack-sistema-de-gesta-seven.vercel.app/login",
     featured: true,
   },
@@ -38,7 +38,7 @@ const projects: Project[] = [
     description: "Plataforma para gestão de treinos e evolução em academia.",
     longDescription:
       "Aplicação completa para entusiastas de academia. Permite a criação de rotinas personalizadas, acompanhamento de cargas e visualização de progresso através de gráficos.",
-    image: "/projects/academia.jpg",
+    image: "/placeholder.jpg",
     technologies: ["Angular", "Java", "Spring Boot", "PostgreSQL"],
     category: "Full Stack",
     github: "https://github.com/stephany-c",
@@ -51,24 +51,24 @@ const projects: Project[] = [
     description: "Página institucional elegante para profissionais de nutrição.",
     longDescription:
       "Design focado em conversão e autoridade, com agendamento online, blog de dicas e apresentação de serviços especializados.",
-    image: "/projects/nutri.jpg",
+    image: "/capa-nutricionista-alissia-rachel.png",
     technologies: ["HTML5", "CSS3", "JavaScript"],
     category: "Front-end",
-    github: "https://github.com/stephany-c",
-    live: "https://seu-projeto.vercel.app",
+    github: "https://github.com/stephany-c/Landing-Page-Nutricionista-Alissia-Rachel",
+    live: "https://nutricionistaalissiarachel.vercel.app/",
     featured: false,
   },
   {
     id: 4,
-    title: "Doceria Sweet Magic",
-    description: "E-commerce/Landing page para uma doceria artesanal.",
+    title: "Landing Page Make-Up",
+    description: "Página institucional elegante para profissionais de maquiagem.",
     longDescription:
-      "Interface visualmente atraente com catálogo de produtos, integração com WhatsApp para pedidos e design responsivo.",
-    image: "/projects/doceria.jpg",
+      "Design focado em conversão e autoridade, com agendamento online, blog de dicas e apresentação de serviços especializados.",
+    image: "/capa-make-up-larissa-oliveira.png",
     technologies: ["HTML5", "CSS3", "JavaScript"],
     category: "Front-end",
-    github: "https://github.com/stephany-c",
-    live: "https://seu-projeto.vercel.app",
+    github: "https://github.com/stephany-c/landing-page-make-up-larissa-oliveira",
+    live: "https://larissa-maquiadora.vercel.app/",
     featured: false,
   },
   {
@@ -77,11 +77,11 @@ const projects: Project[] = [
     description: "Aplicação em tempo real para consulta meteorológica.",
     longDescription:
       "Consumo de API de clima para fornecer dados precisos de temperatura, umidade e previsão para os próximos dias em qualquer cidade do mundo.",
-    image: "/projects/clima.jpg",
-    technologies: ["JavaScript", "API OpenWeather", "CSS3"],
+    image: "/capa-previsao-do-tempo.png",
+    technologies: ["HTML5", "CSS3", "JavaScript"],
     category: "Front-end",
-    github: "https://github.com/stephany-c",
-    live: "https://seu-projeto.vercel.app",
+    github: "https://github.com/stephany-c/Previsao-Do-Tempo",
+    live: "https://stephany-c.github.io/Previsao-Do-Tempo/",
     featured: false,
   },
 ]
@@ -116,21 +116,16 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           </span>
         </div>
 
-        {/* Image placeholder with gradient overlay */}
+        {/* Image with gradient overlay */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-transparent z-10" />
-          <div className="w-full h-full bg-gradient-to-br from-secondary to-muted flex items-center justify-center">
-            <motion.div
-              animate={{ scale: isHovered ? 1.1 : 1 }}
-              transition={{ duration: 0.6 }}
-              className="relative w-32 h-32"
-            >
-              <div className="absolute inset-0 rounded-2xl bg-accent/20 animate-pulse-glow" />
-              <div className="absolute inset-4 rounded-xl bg-accent/10 flex items-center justify-center">
-                <Sparkles className="w-12 h-12 text-accent/50" />
-              </div>
-            </motion.div>
-          </div>
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-110"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
 
         {/* Content */}
@@ -232,39 +227,19 @@ function FeaturedProject({ project }: { project: Project }) {
             <div className="absolute -top-20 -right-20 w-40 h-40 bg-accent/20 rounded-full blur-3xl" />
             <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-accent/10 rounded-full blur-3xl" />
 
-            {/* Placeholder content */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative">
-                <motion.div
-                  animate={{
-                    scale: isHovered ? 1.1 : 1,
-                    rotate: isHovered ? 5 : 0,
-                  }}
-                  transition={{ duration: 0.5 }}
-                  className="w-48 h-48 rounded-3xl bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/20 flex items-center justify-center"
-                >
-                  <Layers className="w-20 h-20 text-accent/40" />
-                </motion.div>
-                <motion.div
-                  animate={{
-                    x: isHovered ? 20 : 0,
-                    y: isHovered ? -20 : 0,
-                  }}
-                  transition={{ duration: 0.5 }}
-                  className="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl bg-secondary/80 border border-border flex items-center justify-center"
-                >
-                  <Code2 className="w-10 h-10 text-muted-foreground" />
-                </motion.div>
-              </div>
+            {/* Image content */}
+            <div className="absolute inset-0">
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-card/40 via-transparent to-transparent opacity-60" />
             </div>
 
-            {/* Floating badge */}
-            <div className="absolute top-6 left-6">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-accent text-sm font-medium">
-                <Sparkles size={14} />
-                Em Destaque
-              </span>
-            </div>
+
           </div>
         </motion.div>
 
@@ -417,11 +392,10 @@ export function Projects() {
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
-                activeFilter === filter
-                  ? "bg-accent text-background"
-                  : "bg-secondary/60 text-muted-foreground hover:text-foreground border border-border hover:border-accent/30"
-              }`}
+              className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${activeFilter === filter
+                ? "bg-accent text-background"
+                : "bg-secondary/60 text-muted-foreground hover:text-foreground border border-border hover:border-accent/30"
+                }`}
             >
               {filter}
             </button>
@@ -466,9 +440,8 @@ export function Projects() {
                     <button
                       key={i}
                       onClick={() => setCurrentIndex(i)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                        currentIndex === i ? "bg-accent w-8" : "bg-border hover:bg-accent/40"
-                      }`}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${currentIndex === i ? "bg-accent w-8" : "bg-border hover:bg-accent/40"
+                        }`}
                       aria-label={`Ir para projeto ${i + 1}`}
                     />
                   ))}

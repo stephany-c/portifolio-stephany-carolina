@@ -46,8 +46,8 @@ function FloatingParticle({ delay, x, y, size }: { delay: number; x: number; y: 
   return (
     <motion.div
       className="absolute bg-accent rounded-full"
-      style={{ 
-        width: size, 
+      style={{
+        width: size,
         height: size,
         left: `${x}%`,
         top: `${y}%`
@@ -178,7 +178,7 @@ export function Hero() {
         >
           <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass border border-accent/30 text-accent text-sm font-medium">
             <Sparkles size={16} className="animate-pulse" />
-            Desenvolvedora Full Stack
+            Desenvolvedora Web
             <Sparkles size={16} className="animate-pulse" />
           </span>
         </motion.div>
@@ -278,7 +278,7 @@ export function Hero() {
             Ver Projetos
           </motion.a>
           <motion.a
-            href="/curriculo-stephany.pdf"
+            href="/Curriculo-Stephany-Carolina.pdf"
             target="_blank"
             rel="noopener noreferrer"
             download

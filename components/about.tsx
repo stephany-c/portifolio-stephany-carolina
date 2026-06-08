@@ -68,13 +68,10 @@ export function About() {
 
               {/* Main container */}
               <div className="relative h-full rounded-3xl bg-gradient-to-br from-secondary via-card to-secondary border border-border overflow-hidden">
-                {/* Grid pattern overlay (placed behind image for texture) */}
-                <div className="absolute inset-0 grid-pattern opacity-10 z-10 pointer-events-none" />
-
                 {/* Profile image filling the entire container */}
                 <div className="absolute inset-0">
                   <Image
-                    src="/profile.jpg"
+                    src="/profile.jpeg"
                     alt="Stephany Carolina"
                     fill
                     className="object-cover"
@@ -120,7 +117,7 @@ export function About() {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Sou uma{" "}
                 <span className="text-foreground font-semibold">
-                  Desenvolvedora Full Stack Júnior
+                  Desenvolvedora Web
                 </span>{" "}
                 apaixonada por criar experiências digitais que combinam{" "}
                 <span className="text-accent">design elegante</span> com funcionalidade robusta.
