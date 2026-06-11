@@ -38,11 +38,11 @@ const projects: Project[] = [
     description: "Plataforma para gestão de treinos e evolução em academia.",
     longDescription:
       "Aplicação completa para entusiastas de academia. Permite a criação de rotinas personalizadas, acompanhamento de cargas e visualização de progresso através de gráficos.",
-    image: "/placeholder.jpg",
+    image: "/capa-academia.png",
     technologies: ["Angular", "Java", "Spring Boot", "PostgreSQL"],
     category: "Full Stack",
-    github: "https://github.com/stephany-c",
-    live: "https://seu-projeto.vercel.app",
+    github: "https://github.com/stephany-c/Aplicativo-para-treino-de-academia",
+    live: "https://aplicativo-para-treino-de-academia.vercel.app/login",
     featured: true,
   },
   {
@@ -123,7 +123,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             src={project.image}
             alt={project.title}
             fill
-            className="object-cover transition-transform duration-700 group-hover:scale-110"
+            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
@@ -219,10 +219,10 @@ function FeaturedProject({ project }: { project: Project }) {
       onMouseLeave={() => setIsHovered(false)}
       className="group relative"
     >
-      <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-16 items-center">
         {/* Image side */}
         <motion.div style={{ y }} className="relative">
-          <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-card border border-border group-hover:border-accent/30 transition-colors duration-500">
+          <div className="relative aspect-[16/10] rounded-3xl overflow-hidden bg-card border border-border group-hover:border-accent/30 transition-colors duration-500">
             {/* Decorative elements */}
             <div className="absolute -top-20 -right-20 w-40 h-40 bg-accent/20 rounded-full blur-3xl" />
             <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-accent/10 rounded-full blur-3xl" />
@@ -233,7 +233,7 @@ function FeaturedProject({ project }: { project: Project }) {
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-card/40 via-transparent to-transparent opacity-60" />
@@ -412,7 +412,7 @@ export function Projects() {
             >
               {filteredProjects.map((project, index) => (
                 <div key={project.id} className="w-full flex-shrink-0 px-4">
-                  <div className="max-w-5xl mx-auto">
+                  <div className="max-w-6xl mx-auto">
                     <FeaturedProject project={project} />
                   </div>
                 </div>

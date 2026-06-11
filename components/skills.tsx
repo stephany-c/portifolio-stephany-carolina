@@ -5,7 +5,6 @@ import { useRef } from "react"
 import {
   FaJs,
   FaReact,
-  FaVuejs,
   FaAngular,
   FaNodeJs,
   FaHtml5,
@@ -22,6 +21,7 @@ import {
   SiTailwindcss,
   SiSwagger,
   SiSpring,
+  SiNextdotjs,
 } from "react-icons/si"
 import { Database, Server, Code2, Palette, Wrench, Globe } from "lucide-react"
 
@@ -42,7 +42,7 @@ const skillCategories = [
     icon: Server,
     skills: [
       { name: "React", icon: FaReact, color: "#61DAFB" },
-      { name: "Vue.js", icon: FaVuejs, color: "#4FC08D" },
+      { name: "Next.js", icon: SiNextdotjs, color: "var(--foreground)" },
       { name: "Angular", icon: FaAngular, color: "#DD0031" },
       { name: "Node.js", icon: FaNodeJs, color: "#339933" },
       { name: "Spring Boot", icon: SiSpring, color: "#6DB33F" },
@@ -119,7 +119,9 @@ function SkillCard({
         <div
           className="p-2 rounded-lg transition-all duration-300"
           style={{
-            backgroundColor: `${skill.color}15`,
+            backgroundColor: skill.color.startsWith("var")
+              ? `color-mix(in srgb, ${skill.color} 15%, transparent)`
+              : `${skill.color}15`,
           }}
         >
           <skill.icon

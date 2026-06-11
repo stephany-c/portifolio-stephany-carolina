@@ -15,12 +15,12 @@ const experiences = [
       "Desenvolvimento e manutenção de landing pages, portais institucionais e blogs com foco em performance e conversão.",
     achievements: [
       "Desenvolvimento e manutenção de landing pages, portais institucionais e blogs",
-      "Criação de interfaces web utilizando HTML, CSS e JavaScript (Bootstrap, React e Vue.js)",
+      "Criação de interfaces web utilizando HTML, CSS e JavaScript (Bootstrap, React e Next.js)",
       "Implementação de layouts responsivos seguindo boas práticas de UI/UX",
       "Integração de páginas com APIs e serviços externos",
       "Gestão de conteúdo em CMS (Sitecore, SharePoint e WordPress)",
     ],
-    technologies: ["React", "Vue.js", "JavaScript", "HTML/CSS", "WordPress", "Sitecore"],
+    technologies: ["React", "Next.js", "JavaScript", "HTML/CSS", "WordPress", "Sitecore"],
   },
 ]
 

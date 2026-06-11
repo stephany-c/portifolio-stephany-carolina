@@ -176,10 +176,9 @@ export function Hero() {
           transition={{ duration: 0.6 }}
           className="mb-8"
         >
-          <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass border border-accent/30 text-accent text-sm font-medium">
-            <Sparkles size={16} className="animate-pulse" />
+          <span className=" inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass border border-accent/30 text-accent text-sm font-medium">
             Desenvolvedora Web
-            <Sparkles size={16} className="animate-pulse" />
+
           </span>
         </motion.div>
 
@@ -317,6 +316,6 @@ export function Hero() {
           </motion.div>
         </motion.a>
       </motion.div>
-    </section>
+    </section >
   )
 }

@@ -9,7 +9,7 @@ import { MapPin, Calendar, GraduationCap, Briefcase, Code2, Heart } from "lucide
 const highlights = [
   { icon: Code2, text: "Desenvolvimento Front-end & Back-end" },
   { icon: Heart, text: "Paixão por UI/UX Design" },
-  { icon: Briefcase, text: "Experiência em Agência" },
+  { icon: Briefcase, text: "Experiência em Agência de Marketing Digital" },
 ]
 
 export function About() {
