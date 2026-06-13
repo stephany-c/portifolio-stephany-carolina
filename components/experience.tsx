@@ -15,12 +15,12 @@ const experiences = [
       "Desenvolvimento e manutenção de landing pages, portais institucionais e blogs com foco em performance e conversão.",
     achievements: [
       "Desenvolvimento e manutenção de landing pages, portais institucionais e blogs",
-      "Criação de interfaces web utilizando HTML, CSS e JavaScript (Bootstrap, React e Next.js)",
+      "Criação de interfaces web utilizando HTML, CSS e JavaScript, React, Tailwindcss, Bootstrap )",
       "Implementação de layouts responsivos seguindo boas práticas de UI/UX",
       "Integração de páginas com APIs e serviços externos",
-      "Gestão de conteúdo em CMS (Sitecore, SharePoint e WordPress)",
+      "Gestão de conteúdo em CMS (Sitecore, WordPress)",
     ],
-    technologies: ["React", "Next.js", "JavaScript", "HTML/CSS", "WordPress", "Sitecore"],
+    technologies: ["React", "JavaScript", "HTML/CSS", "WordPress", "Sitecore"],
   },
 ]
 
@@ -76,11 +76,10 @@ function TimelineItem({
         initial={{ scale: 0 }}
         animate={isInView ? { scale: 1 } : {}}
         transition={{ duration: 0.4, delay: index * 0.15 + 0.2 }}
-        className={`absolute left-0 top-2 -translate-x-1/2 w-4 h-4 rounded-full border-2 ${
-          type === "work"
-            ? "bg-accent border-accent glow-sm"
-            : "bg-card border-accent"
-        }`}
+        className={`absolute left-0 top-2 -translate-x-1/2 w-4 h-4 rounded-full border-2 ${type === "work"
+          ? "bg-accent border-accent glow-sm"
+          : "bg-card border-accent"
+          }`}
       />
 
       {/* Content card */}

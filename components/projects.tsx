@@ -52,7 +52,7 @@ const projects: Project[] = [
     longDescription:
       "Design focado em conversão e autoridade, com agendamento online, blog de dicas e apresentação de serviços especializados.",
     image: "/capa-nutricionista-alissia-rachel.png",
-    technologies: ["HTML5", "CSS3", "JavaScript"],
+    technologies: ["HTML5", "CSS3", "JavaScript", "Next.js"],
     category: "Front-end",
     github: "https://github.com/stephany-c/Landing-Page-Nutricionista-Alissia-Rachel",
     live: "https://nutricionistaalissiarachel.vercel.app/",
@@ -65,7 +65,7 @@ const projects: Project[] = [
     longDescription:
       "Design focado em conversão e autoridade, com agendamento online, blog de dicas e apresentação de serviços especializados.",
     image: "/capa-make-up-larissa-oliveira.png",
-    technologies: ["HTML5", "CSS3", "JavaScript"],
+    technologies: ["HTML5", "CSS3", "JavaScript", "Next.js"],
     category: "Front-end",
     github: "https://github.com/stephany-c/landing-page-make-up-larissa-oliveira",
     live: "https://larissa-maquiadora.vercel.app/",
@@ -78,7 +78,7 @@ const projects: Project[] = [
     longDescription:
       "Consumo de API de clima para fornecer dados precisos de temperatura, umidade e previsão para os próximos dias em qualquer cidade do mundo.",
     image: "/capa-previsao-do-tempo.png",
-    technologies: ["HTML5", "CSS3", "JavaScript"],
+    technologies: ["HTML5", "CSS3", "JavaScript", "React"],
     category: "Front-end",
     github: "https://github.com/stephany-c/Previsao-Do-Tempo",
     live: "https://stephany-c.github.io/Previsao-Do-Tempo/",
@@ -469,7 +469,7 @@ export function Projects() {
           className="mt-20 text-center"
         >
           <div className="inline-flex flex-col items-center gap-4 p-8 rounded-3xl glass border border-border">
-            <Sparkles className="w-8 h-8 text-accent" />
+
             <p className="text-lg text-muted-foreground max-w-md">
               Novos projetos estão sendo desenvolvidos. Acompanhe meu GitHub para ver as
               últimas atualizações!

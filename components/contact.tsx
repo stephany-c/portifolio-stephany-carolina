@@ -235,9 +235,7 @@ export function Contact() {
 
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="p-3 rounded-2xl bg-accent/20 border border-accent/30">
-                      <Sparkles size={24} className="text-accent" />
-                    </div>
+
                     <div>
                       <h3 className="text-xl font-bold text-foreground">Disponível para oportunidades</h3>
                       <p className="text-sm text-muted-foreground">Pronta para novos desafios</p>
@@ -251,15 +249,7 @@ export function Contact() {
                   </p>
 
                   <div className="space-y-4">
-                    <motion.a
-                      href="mailto:ster.carolinas@hotmail.com"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="flex items-center justify-center gap-3 w-full px-6 py-4 rounded-xl bg-accent text-background font-semibold hover:bg-accent-light transition-colors"
-                    >
-                      <Send size={18} />
-                      <span>Enviar Email</span>
-                    </motion.a>
+
 
                     <motion.a
                       href="https://www.linkedin.com/in/stephany-carolina-de-souza-1056b81a6/"
@@ -274,14 +264,7 @@ export function Contact() {
                     </motion.a>
                   </div>
 
-                  {/* Quick response badge */}
-                  <div className="mt-8 flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                    <span className="relative flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
-                    </span>
-                    <span>Respondo em até 24 horas</span>
-                  </div>
+
                 </div>
               </div>
             </div>

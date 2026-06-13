@@ -44,7 +44,7 @@ const skillCategories = [
       { name: "React", icon: FaReact, color: "#61DAFB" },
       { name: "Next.js", icon: SiNextdotjs, color: "var(--foreground)" },
       { name: "Angular", icon: FaAngular, color: "#DD0031" },
-      { name: "Node.js", icon: FaNodeJs, color: "#339933" },
+      /*{ name: "Node.js", icon: FaNodeJs, color: "#339933" },*/
       { name: "Spring Boot", icon: SiSpring, color: "#6DB33F" },
     ],
   },
@@ -73,7 +73,7 @@ const skillCategories = [
     skills: [
       { name: "WordPress", icon: FaWordpress, color: "#21759B" },
       { name: "Sitecore", icon: Globe, color: "#EB1F1F" },
-      { name: "SharePoint", icon: Globe, color: "#0078D4" },
+
     ],
   },
 ]
@@ -209,31 +209,7 @@ export function Skills() {
           ))}
         </div>
 
-        {/* Additional skills */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-20 text-center"
-        >
-          <h3 className="text-lg font-medium text-muted-foreground mb-6">
-            Também possuo conhecimento em
-          </h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            {additionalSkills.map((skill, index) => (
-              <motion.span
-                key={skill}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.3, delay: 0.9 + index * 0.05 }}
-                whileHover={{ scale: 1.05, y: -2 }}
-                className="px-5 py-2.5 rounded-full bg-secondary/60 border border-border hover:border-accent/40 text-sm text-muted-foreground hover:text-foreground transition-all duration-300 cursor-default"
-              >
-                {skill}
-              </motion.span>
-            ))}
-          </div>
-        </motion.div>
+
       </div>
     </section>
   )
