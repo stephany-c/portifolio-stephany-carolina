@@ -10,12 +10,12 @@ const experiences = [
     title: "Desenvolvedora Front-end",
     company: "Uaify – Agência de Performance e Lançamentos",
     location: "Belo Horizonte, MG",
-    period: "Janeiro 2022 - Atual",
+    period: "Novembro 2022 - Atual",
     description:
       "Desenvolvimento e manutenção de landing pages, portais institucionais e blogs com foco em performance e conversão.",
     achievements: [
       "Desenvolvimento e manutenção de landing pages, portais institucionais e blogs",
-      "Criação de interfaces web utilizando HTML, CSS e JavaScript, React, Tailwindcss, Bootstrap )",
+      "Criação de interfaces web utilizando HTML, CSS e JavaScript, React, Tailwind CSS, Bootstrap",
       "Implementação de layouts responsivos seguindo boas práticas de UI/UX",
       "Integração de páginas com APIs e serviços externos",
       "Gestão de conteúdo em CMS (Sitecore, WordPress)",

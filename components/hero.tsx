@@ -277,7 +277,7 @@ export function Hero() {
             Ver Projetos
           </motion.a>
           <motion.a
-            href="/Curriculo-Stephany-Carolina.pdf"
+            href="/Curriculo_Stephany_Carolina"
             target="_blank"
             rel="noopener noreferrer"
             download
