@@ -18,7 +18,6 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("inicio")
-  const [isHidden, setIsHidden] = useState(false)
   const [mounted, setMounted] = useState(false)
   const { scrollY } = useScroll()
   const { theme, setTheme } = useTheme()
@@ -28,12 +27,6 @@ export function Header() {
   }, [])
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious() ?? 0
-    if (latest > previous && latest > 150) {
-      setIsHidden(true)
-    } else {
-      setIsHidden(false)
-    }
     setIsScrolled(latest > 50)
   })
 
@@ -55,10 +48,19 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const handleMobileNav = (href: string) => {
+    const id = href.slice(1)
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+    setTimeout(() => setIsMobileMenuOpen(false), 300)
+  }
+
   return (
     <motion.header
       initial={{ y: -100 }}
-      animate={{ y: isHidden ? -100 : 0 }}
+      animate={{ y: 0 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled ? "glass-strong py-4" : "bg-transparent py-6"
@@ -231,7 +233,10 @@ export function Header() {
                     <motion.a
                       key={link.href}
                       href={link.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        handleMobileNav(link.href)
+                      }}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.05 }}
@@ -248,7 +253,10 @@ export function Header() {
               </div>
               <motion.a
                 href="#contato"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault()
+                  handleMobileNav("#contato")
+                }}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}

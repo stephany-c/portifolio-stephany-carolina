@@ -316,7 +316,7 @@ function FeaturedProject({ project }: { project: Project }) {
 
 export function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [activeFilter, setActiveFilter] = useState("Full Stack")
+  const [activeFilter, setActiveFilter] = useState("Todos")
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 

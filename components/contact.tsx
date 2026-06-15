@@ -69,7 +69,7 @@ function ContactCard({
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -4, scale: 1.01 }}
-      className="group relative flex items-center gap-4 p-5 rounded-2xl bg-card border border-border hover:border-accent/30 transition-all duration-300 cursor-pointer"
+      className="group relative flex items-center gap-4 p-5 rounded-2xl bg-card border border-border hover:border-accent/30 transition-all duration-300 cursor-pointer min-w-0 overflow-hidden"
     >
       {/* Hover glow */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -78,11 +78,11 @@ function ContactCard({
         <item.icon size={22} className="text-accent" />
       </div>
 
-      <div className="relative z-10 flex-1">
+      <div className="relative z-10 flex-1 min-w-0">
         <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">
           {item.label}
         </p>
-        <p className="text-foreground font-medium">{item.value}</p>
+        <p className="text-foreground font-medium truncate">{item.value}</p>
       </div>
 
       {item.copyable && (
@@ -117,7 +117,7 @@ function ContactCard({
         href={item.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="block"
+        className="block min-w-0"
       >
         {CardContent}
       </a>
@@ -132,7 +132,7 @@ export function Contact() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="contato" className="py-32 px-4 sm:px-6 relative overflow-hidden" ref={ref}>
+    <section id="contato" className="py-32 px-4 sm:px-6 relative overflow-hidden" ref={ref} style={{ overflowX: "clip" }}>
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 right-0 w-[600px] h-[600px] translate-x-1/2 translate-y-1/2 bg-gradient-radial from-accent/10 to-transparent rounded-full blur-3xl" />
@@ -167,7 +167,7 @@ export function Contact() {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Info */}
-          <div className="space-y-6">
+          <div className="space-y-6 min-w-0">
             <motion.h3
               initial={{ opacity: 0, x: -20 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -218,14 +218,14 @@ export function Contact() {
 
           {/* CTA Card */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="relative"
+            className="relative w-full min-w-0"
           >
             <div className="sticky top-32">
               {/* Main CTA Card */}
-              <div className="relative p-6 sm:p-8 md:p-10 rounded-3xl">
+              <div className="relative p-6 sm:p-8 md:p-10 rounded-3xl overflow-hidden">
                 {/* Background gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-accent/10 to-card" />
                 <div className="absolute inset-0 glass-strong" />
