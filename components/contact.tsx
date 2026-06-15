@@ -132,7 +132,7 @@ export function Contact() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="contato" className="py-32 px-6 relative overflow-hidden" ref={ref}>
+    <section id="contato" className="py-32 px-4 sm:px-6 relative overflow-hidden" ref={ref}>
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 right-0 w-[600px] h-[600px] translate-x-1/2 translate-y-1/2 bg-gradient-radial from-accent/10 to-transparent rounded-full blur-3xl" />
@@ -225,7 +225,7 @@ export function Contact() {
           >
             <div className="sticky top-32">
               {/* Main CTA Card */}
-              <div className="relative p-8 md:p-10 rounded-3xl overflow-hidden">
+              <div className="relative p-6 sm:p-8 md:p-10 rounded-3xl">
                 {/* Background gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-accent/10 to-card" />
                 <div className="absolute inset-0 glass-strong" />

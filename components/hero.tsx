@@ -272,7 +272,7 @@ export function Hero() {
             href="#projetos"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="px-8 py-4 rounded-xl bg-accent text-background font-semibold text-sm tracking-wide hover:bg-accent-light transition-colors glow"
+            className="w-full sm:w-auto text-center px-8 py-4 rounded-xl bg-accent text-background font-semibold text-sm tracking-wide hover:bg-accent-light transition-colors glow"
           >
             Ver Projetos
           </motion.a>
@@ -283,7 +283,7 @@ export function Hero() {
             download
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="flex items-center gap-2 px-8 py-4 rounded-xl border border-accent bg-accent/10 hover:bg-accent/20 text-accent font-semibold text-sm tracking-wide transition-colors"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-accent bg-accent/10 hover:bg-accent/20 text-accent font-semibold text-sm tracking-wide transition-colors"
           >
             <Download size={18} />
             Baixar Currículo
@@ -292,7 +292,7 @@ export function Hero() {
             href="#contato"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="px-8 py-4 rounded-xl border border-border hover:border-accent/50 font-medium text-sm tracking-wide transition-colors"
+            className="w-full sm:w-auto text-center px-8 py-4 rounded-xl border border-border hover:border-accent/50 font-medium text-sm tracking-wide transition-colors"
           >
             Entrar em Contato
           </motion.a>

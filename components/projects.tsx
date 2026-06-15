@@ -24,7 +24,7 @@ const projects: Project[] = [
     title: "Gestão Financeira Pro",
     description: "Sistema completo para controle de finanças pessoais e empresariais.",
     longDescription:
-      "Uma aplicação Full Stack desenvolvida para facilitar o gerenciamento financeiro. Conta com controle de entradas/saídas, relatórios detalhados e segurança avançada de dados.",
+      "Uma aplicação Full Stack desenvolvida para facilitar o gerenciamento financeiro. Conta com controle de entradas/saídas e relatórios detalhados.",
     image: "/capa-gestao-financas.png",
     technologies: ["Angular", "Java", "Spring Boot", "PostgreSQL"],
     category: "Full Stack",
@@ -316,7 +316,7 @@ function FeaturedProject({ project }: { project: Project }) {
 
 export function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [activeFilter, setActiveFilter] = useState("Todos")
+  const [activeFilter, setActiveFilter] = useState("Full Stack")
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
