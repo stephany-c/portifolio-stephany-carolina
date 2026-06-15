@@ -24,7 +24,7 @@ const projects: Project[] = [
     title: "Gestão Financeira Pro",
     description: "Sistema completo para controle de finanças pessoais e empresariais.",
     longDescription:
-      "Uma aplicação Full Stack robusta desenvolvida para facilitar o gerenciamento financeiro. Conta com controle de entradas/saídas, relatórios detalhados e segurança avançada de dados.",
+      "Uma aplicação Full Stack desenvolvida para facilitar o gerenciamento financeiro. Conta com controle de entradas/saídas, relatórios detalhados e segurança avançada de dados.",
     image: "/capa-gestao-financas.png",
     technologies: ["Angular", "Java", "Spring Boot", "PostgreSQL"],
     category: "Full Stack",
@@ -37,7 +37,7 @@ const projects: Project[] = [
     title: "GymFlow - Treino Inteligente",
     description: "Plataforma para gestão de treinos e evolução em academia.",
     longDescription:
-      "Aplicação completa para entusiastas de academia. Permite a criação de rotinas personalizadas, acompanhamento de cargas e visualização de progresso através de gráficos.",
+      "Aplicação para gerenciamento de treinos de musculação e exercícios físicos. Permite a criação de fichas de treino personalizadas e acompanhamento de cargas.",
     image: "/capa-academia.png",
     technologies: ["Angular", "Java", "Spring Boot", "PostgreSQL"],
     category: "Full Stack",
@@ -48,9 +48,9 @@ const projects: Project[] = [
   {
     id: 3,
     title: "Landing Page Nutricionista",
-    description: "Página institucional elegante para profissionais de nutrição.",
+    description: "Página institucional para profissionais de nutrição.",
     longDescription:
-      "Design focado em conversão e autoridade, com agendamento online, blog de dicas e apresentação de serviços especializados.",
+      "Design focado em conversão e apresentação de serviços especializados.",
     image: "/capa-nutricionista-alissia-rachel.png",
     technologies: ["HTML5", "CSS3", "JavaScript", "Next.js"],
     category: "Front-end",
@@ -61,9 +61,9 @@ const projects: Project[] = [
   {
     id: 4,
     title: "Landing Page Make-Up",
-    description: "Página institucional elegante para profissionais de maquiagem.",
+    description: "Página institucional para profissionais de maquiagem.",
     longDescription:
-      "Design focado em conversão e autoridade, com agendamento online, blog de dicas e apresentação de serviços especializados.",
+      "Design focado em conversão e apresentação de serviços especializados.",
     image: "/capa-make-up-larissa-oliveira.png",
     technologies: ["HTML5", "CSS3", "JavaScript", "Next.js"],
     category: "Front-end",
