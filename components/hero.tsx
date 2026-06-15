@@ -221,7 +221,7 @@ export function Hero() {
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           Transformando ideias em <span className="text-foreground font-medium">experiências digitais</span> elegantes
-          e funcionais. Especializada em criar interfaces modernas com foco em{" "}
+          e funcionais. Especializada em criar interfaces com foco em{" "}
           <span className="text-accent font-medium">usabilidade</span> e{" "}
           <span className="text-accent font-medium">performance</span>.
         </motion.p>
@@ -277,7 +277,7 @@ export function Hero() {
             Ver Projetos
           </motion.a>
           <motion.a
-            href="/Curriculo_Stephany_Carolina"
+            href="/Curriculo_Stephany_Carolina.pdf"
             target="_blank"
             rel="noopener noreferrer"
             download
